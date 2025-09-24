@@ -1,4 +1,4 @@
-package com.FitnessSense.demo;
+package com.FitnessSense.demo.Model;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
