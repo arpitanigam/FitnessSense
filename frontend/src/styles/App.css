@@ -1,0 +1,27 @@
+/* App.css - extracted from App.jsx */
+
+.container {
+	max-width: 500px;
+	margin: 2rem auto;
+	text-align: center;
+}
+
+.form input {
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+.form-buttons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.form-buttons button:first-child {
+	flex: 1;
+	margin-right: 0.5rem;
+}
+
+.form-buttons button:last-child {
+	flex: 1;
+	margin-left: 0.5rem;
+}
