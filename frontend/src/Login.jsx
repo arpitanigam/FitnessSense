@@ -22,8 +22,10 @@ export default function Login({ setUser }) {
 	};
 
 	return (
-		<div className="container">
-			<h2 className="title">Login or Register</h2>
+		
+		<div className="page">
+				<h1 className="brand">FitSense</h1>
+			<div className="title">Login or Register</div>
 
 			<form className="form">
 				<input
