@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { login, register } from "./helper/api";
+import { login, register } from "../helper/api";
 
 export default function Login({ setUser }) {
 	const [username, setUsername] = useState("");
