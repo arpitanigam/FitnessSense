@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { login, register } from "../helper/api";
+import Button from "./ui/Button";
+import InputField from "./ui/InputField";
+
+import styles from "../styles/Login.module.css";
 
 export default function Login({ setUser }) {
 	const [username, setUsername] = useState("");
@@ -22,18 +26,19 @@ export default function Login({ setUser }) {
 	};
 
 	return (
-		<div className="container">
+		<div className="page">
+			<div className="container" style={{maxWidth : "420px"}}>
+			<div className="brand">FitSense</div>
 			<h2 className="title">Login or Register</h2>
-
 			<form className="form">
-				<input
+				<InputField
 					type="text"
 					placeholder="Username"
 					value={username}
 					onChange={(e) => setUsername(e.target.value)}
 					required
 				/>
-				<input
+				<InputField
 					type="password"
 					placeholder="Password"
 					value={password}
@@ -41,15 +46,16 @@ export default function Login({ setUser }) {
 					required
 				/>
 
-				<div className="form-buttons">
-					<button type="submit" onClick={(e) => handleSubmit(e, "login")}>
-					  Login
-					</button>
-					<button type="submit" onClick={(e) => handleSubmit(e, "register")}>
+				<div className={styles.formButtons}>
+					<Button type="submit" onClick={(e) => handleSubmit(e, "login")}>
+						Login
+					</Button>
+					<Button type="submit" onClick={(e) => handleSubmit(e, "register")}>
 						Register
-					</button>
+					</Button>
 				</div>
 			</form>
+			</div>
 		</div>
 	);
 }

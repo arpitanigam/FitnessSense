@@ -1,5 +1,3 @@
-/* App.css - extracted from App.jsx */
-
 :root {
   --bg-color-dark: #121212;
   --bg-color-card: #1a1a1a;
@@ -48,16 +46,6 @@ body {
   }
 }
 
-.container {
-  background-color: var(--bg-color-card);
-  border-radius: 20px;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
-  padding: 2.5rem;
-  max-width: 420px;
-  width: 90%;
-  text-align: center;
-}
-
 .title {
   margin-bottom: 1.8rem;
   font-weight: 500;
@@ -65,51 +53,12 @@ body {
   color: var(--text-muted);
 }
 
-.form input {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid var(--input-border);
-  border-radius: 10px;
-  background-color: var(--input-bg);
-  color: #e0e0e0;
-  font-size: 1rem;
-  outline: none;
-  transition: all 0.2s ease-in-out;
-}
-
-.form input:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
-  background-color: #2a2a2a;
-}
-
-.form-buttons {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-.form-buttons button {
-  flex: 1;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 10px;
-  background-color: #2e2e2e;
-  color: var(--text-color);
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s ease-in-out, transform 0.1s ease-in-out;
-}
-
-.form-buttons button:hover {
-  background-color: var(--accent-color);
-  transform: translateY(-2px);
-  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
-}
-
-.form-buttons button:active {
-  transform: translateY(0);
+.container {
+  background-color: var(--bg-color-card);
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+  padding: 2.5rem;
+  max-width: 1000px;
+  width: 90%;
+  text-align: center;
 }
