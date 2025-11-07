@@ -1,0 +1,20 @@
+.exercisePlannerdiv{
+    /* background-color: #111111; */
+    max-height: 100vh;
+    height: 100vh;
+    background-color: #222222;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    padding: 9%;
+}
+.heading{
+    font-size:2rem ;
+    padding-bottom: 5%;
+
+}
+.exercise-table{
+    display: flex;
+    background-color: yellow;
+
+}
