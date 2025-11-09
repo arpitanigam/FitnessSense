@@ -6,11 +6,13 @@ import java.util.Map;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.FitnessSense.demo.Controller.ApiController;
 
 @RestController
+@RequestMapping("/api")
 public class ExerciseTable {
 	
-	 @GetMapping("/exercisePlanner")
+		@GetMapping("/get-exercise-plan")
 	    public Map<String, Object> getJsonData() {
 	        Map<String, Object> data = new HashMap<>();
 	        data.put("exercise_name", "exercise1");
