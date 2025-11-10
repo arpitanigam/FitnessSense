@@ -8,8 +8,8 @@ export default function ExerciseTable({exercises}){
           <th>Exercise</th>
           <th>Sets</th>
           <th>Reps</th>
-          <th>Duration</th>
-          <th>Rest</th>
+          <th>Reference Video</th>
+          <th>Day</th>
         </tr>
       </thead>
       <tbody>

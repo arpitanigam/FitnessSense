@@ -2,8 +2,8 @@
     /* background-color: #111111; */
     max-height: 100vh;
     height: 100vh;
-    background-color: #222222;
-    color: #e0e0e0;
+    background-color:var(--bg-color-dark);
+    color: var(--text-color);
     font-family: 'Inter', sans-serif;
     font-weight: lighter;
     padding: 9%;
@@ -13,8 +13,24 @@
     padding-bottom: 5%;
 
 }
-.exercise-table{
-    display: flex;
-    background-color: yellow;
-
+.exercise-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  text-align: left;
+  background-color:var(--bg-color-card);
+  font-family: 'Inter', sans-serif;
+  font-weight: lighter;
+  border-radius: 1rem
 }
+
+.exercise-table th,
+.exercise-table td {
+  padding: 12px 16px;
+}
+
+.exercise-table th {
+    padding-top: 20px;
+  font-weight: bold;
+}
+
