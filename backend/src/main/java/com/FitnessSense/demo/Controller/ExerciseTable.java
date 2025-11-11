@@ -5,16 +5,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.FitnessSense.demo.Controller.ApiController;
 
 @RestController
 @RequestMapping("/api")
 public class ExerciseTable {
 	
-		@GetMapping("/get-exercise-plan")
+		@PostMapping("/get-exercise-plan")
 	    public List<Map<String, Object>> getJsonData() {
 	        Map<String, Object> obj1 = new HashMap<>();
 	        obj1.put("exercise_name", "exercise1");

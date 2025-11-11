@@ -28,8 +28,6 @@ export default function InputForm({ setResponse }) {
 				activeDays,
 			});
 
-			console.log(formData);
-
 			const res = await fetch("http://localhost:8080/api/get-exercise-plan", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
@@ -41,7 +39,7 @@ export default function InputForm({ setResponse }) {
 			}
 
 			const data = await res.json();
-			setResponse(data.message);
+			setResponse(data);
 		} catch (error) {
 			console.error("Error sending request:", error);
 			setResponse("Something went wrong!");
