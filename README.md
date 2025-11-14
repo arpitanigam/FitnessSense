@@ -12,3 +12,6 @@ npm install
 npm run dev
 ```
 from the frontend/ directory
+
+---
+The LLM is not included in the docker container and must be run separately from LM studio on http://localhost:1234/
