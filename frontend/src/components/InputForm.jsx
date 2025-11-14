@@ -3,6 +3,7 @@ import InputField from "./ui/InputField";
 import Button from "./ui/Button";
 import styles from "../styles/InputForm.module.css";
 import inputFieldStyles from "../styles/ui/InputField.module.css";
+import { getExercisePlan } from "../helper/api";
 
 export default function InputForm({ setResponse }) {
 	const [clicked, setClicked] = useState(false);
@@ -19,27 +20,17 @@ export default function InputForm({ setResponse }) {
 		setClicked(true);
 
 		try {
-			const formData = JSON.stringify({
+			const formData = {
 				age,
 				gender,
 				height,
 				currentWeight,
 				targetWeight,
 				activeDays,
-			});
+			};
 
-			const res = await fetch("http://localhost:8080/api/get-exercise-plan", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: formData,
-			});
-
-			if (!res.ok) {
-				throw new Error(`HTTP error! Status: ${res.status}`);
-			}
-
-			const data = await res.json();
-			setResponse(data);
+			const res = await getExercisePlan(formData)
+			setResponse(res);
 		} catch (error) {
 			console.error("Error sending request:", error);
 			setResponse("Something went wrong!");

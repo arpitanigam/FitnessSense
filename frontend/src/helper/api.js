@@ -1,22 +1,26 @@
-const API_BASE = "http://localhost:8080"; // change to the backend URL
-
-export async function login(username, password) {
-	const res = await fetch(`${API_BASE}/login`, {
+async function apiRequest(endpoint, data = null, includeCreds = false) {
+	const res = await fetch("/api" + endpoint, {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
-		body: JSON.stringify({ username, password }),
-		credentials: "include",
+		body: data ? JSON.stringify(data) : null,
+		credentials: includeCreds ? "include" : "same-origin",
 	});
-	if (!res.ok) throw new Error("Login failed");
+
+	if (!res.ok) {
+		throw new Error(`${endpoint} failed. Status: ${res.status}`);
+	}
+
 	return res.json();
 }
 
-export async function register(username, password) {
-	const res = await fetch(`${API_BASE}/register`, {
-		method: "POST",
-		headers: { "Content-Type": "application/json" },
-		body: JSON.stringify({ username, password }),
-	});
-	if (!res.ok) throw new Error("Registration failed");
-	return res.json();
-}
+export const login = (username, password) =>
+	apiRequest("/login", { username, password }, true);
+
+export const register = (username, password) =>
+	apiRequest("/register", { username, password });
+
+export const getExercisePlan = (formData) =>
+	apiRequest("/get-exercise-plan", formData);
+
+export const analyze = (imageData) =>
+	apiRequest("/analyze", { image: imageData });
