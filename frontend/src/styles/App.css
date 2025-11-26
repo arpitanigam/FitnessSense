@@ -1,0 +1,64 @@
+:root {
+  --bg-color-dark: #121212;
+  --bg-color-card: #1a1a1a;
+  --accent-color: #3b82f6;
+  --text-color: #ffffff;
+  --text-muted: #b5b5b5;
+  --input-bg: #222;
+  --input-border: #333;
+}
+
+body {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color);
+  font-family: 'Poppins', 'Inter', sans-serif;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.brand {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.15),
+               0 0 16px var(--accent-color);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.15),
+                 0 0 16px var(--accent-color);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.25),
+                 0 0 25px var(--accent-color);
+  }
+}
+
+.title {
+  margin-bottom: 1.8rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.container {
+  background-color: var(--bg-color-card);
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+  padding: 2.5rem;
+  max-width: 1000px;
+  width: 90%;
+  text-align: center;
+}
