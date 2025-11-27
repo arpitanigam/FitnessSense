@@ -1,0 +1,78 @@
+.container {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--bg-color-dark);
+	color: var(--text-color);
+}
+
+.videoWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.video {
+	visibility: hidden;
+	position: absolute;
+}
+
+.canvas {
+	border: 1px solid var(--input-border);
+	border-radius: 8px;
+	background-color: var(--bg-color-card);
+	
+	width: 640px;
+	height: 480px;
+	max-width: 100%;
+}
+
+.buttonGroup {
+	margin-top: 8px;
+	display: flex;
+	gap: 10px;
+}
+
+.analysis {
+	margin-top: 16px;
+	padding: 12px;
+	border-radius: 6px;
+	background-color: var(--bg-color-card);
+	border: 1px solid var(--input-border);
+	font-size: 0.95rem;
+	color: var(--text-color);
+
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+.analysis h2 {
+	margin: 0 0 8px;
+	font-size: 1.1rem;
+	color: var(--text-color);
+}
+
+.analysis p,
+.analysis li,
+.analysis span,
+.analysis strong,
+.analysis em {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+	word-break: break-word;
+	text-align: left;
+}
+
+.preview {
+	margin-top: 16px;
+	text-align: center;
+}
+
+.preview img {
+	border: 1px solid var(--input-border);
+	border-radius: 8px;
+	width: 40%;
+}
